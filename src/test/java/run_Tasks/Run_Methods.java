@@ -33,18 +33,6 @@ public class Run_Methods {
 		
 
 		//Register_Page RP = new Register_Page(driver);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-	
 	@Test(priority=0)
 	public void Scenario1() {
 		Login_page lp = new Login_page(driver);
@@ -81,7 +69,7 @@ public class Run_Methods {
 
 		
 	@Test(priority=2)
-	public void Scenario2() throws InterruptedException {
+	public void Scenario2()  {
 		JacketNavigationPage jnp=new JacketNavigationPage(driver);
 		 jnp.getSelects();
 		 jnp.scroll();
@@ -94,75 +82,49 @@ public class Run_Methods {
 		 
 		 jnp.colourOfjacket();
 		 jnp.addtocart();
-		 Thread.sleep(3000);
+		 // Thread.sleep(3000);
 
 		 jnp.viewCart();
-		 Thread.sleep(3000);
+		 // Thread.sleep(3000);
 		 jnp.closebtn();
 		 jnp.Backhome();
 		 }
 	@Test(priority=3)
-	public void Scenario03() throws InterruptedException {
+	public void Scenario03()  {
 		NavigatedHomePage_2 NHP = new NavigatedHomePage_2(driver);
 	
-		 //RP.Popup();
 		 NHP.ClickImagenav();
-
-		 //RP.Popup();
 		 NHP.scrollD();
 		 NHP.Nextbtn();
-		 //RP.Popup();
-
-		 Thread.sleep(3000);
+		 //Thread.sleep(3000);
 		 NHP.SelectSortByList();
-		 //RP.Popup();
 		 NHP.scrollD();
 		 NHP.Nextbtn();
-
-//		 RP.Popup();
 		 NHP.scroll();
 		 NHP.Backbtn();
-// RP.Popup();
-		 
 		 NHP.PantImage();
 		 NHP.FullScreen();
 		 NHP.FullScreenNext();
 		 NHP.FullScreenNext();
 		 NHP.FullScreenExit();
-
-		// RP.Popup();
 		 NHP.getSelectsize();
 		 NHP.AddCart();
 	}
 
 	@Test(priority=4)
-	public void Scenario4() throws InterruptedException {
-		HomePage3_wishlist HPW = new HomePage3_wishlist(driver);
-	
-		 
+	public void Scenario4() {
+		HomePage3_wishlist HPW = new HomePage3_wishlist(driver); 
 		HPW.Backhome();
-		// RP.Popup();
 		 HPW.mouseActions();
 		 HPW.GearBags();
-
-		// RP.Popup();
 		 HPW.ListModes();
-		// RP.Popup();
-		// Hp.scroll();
 		 HPW.ListModes2();
 		 HPW.NextLists();
-
-		// RP.Popup();
-		// Hp.scroll();
-		 HPW.selectBag();
-		 
-		// RP.Popup();
+		 HPW.selectBag();	
 		 HPW.WishListBag();
 		 HPW.RemoveItemsFromWishlist();
-
 		 HPW.MyCartToOrder();
 		 HPW.ViewAndEditCart();
-		// RP.Popup();
 		 HPW.EditItemParamenter();
 		 HPW.EditSizes();
 		 HPW.EditColor();
@@ -171,8 +133,6 @@ public class Run_Methods {
 		 HPW.Popup();
 		 HPW.EnterQuantities("2");
 		 HPW.UpdateCart();
-		 
-		 Thread.sleep(2000);
 		 HPW.Popup();
 		 HPW.scroll();
 		 
@@ -184,21 +144,8 @@ public class Run_Methods {
 		 HPW.scroll();
 		 HPW.scroll();
 		 HPW.FinalcheckOut();
-		Thread.sleep(2000);
+		
 	}
-//======================================================================================================================
-	/*
-	 * @Test(priority=5) public void Scenario5() throws InterruptedException {
-	 * ShippingAddress SA= new ShippingAddress(driver);
-	 * 
-	 * SA.AddNeWAddress(); SA.FillNewAddressName("Peyusia");
-	 * SA.FillNewAddressLastName("chauhan"); SA.FillNewAddresscompany("ExcelR");
-	 * SA.FillNewAddresStreet("Lonavala layout");
-	 * SA.FillNewAddresCity("marathhalli");
-	 * SA.FillNewAddresTelephoneCheckBttn("1234567858");
-	 * 
-	 * SA.ButtonNext(); }
-	 */
 	@Test(priority=5)
 	public void shipping1() {
 		
@@ -255,7 +202,7 @@ public class Run_Methods {
 		
 	}
 	@Test(priority=12)
-	public void shipping9() throws InterruptedException {
+	public void shipping9() {
 		
 		WebElement NextButton=driver.findElement(By.xpath("//div[@id='shipping-method-buttons-container']/div/button"));
 		NextButton.click();
@@ -268,7 +215,6 @@ public class Run_Methods {
 		SubmitPlaceOrder.click();	
 	}
 
-//======================================================================================================================	
 	@Test(priority=13)
 	public void Scenario7() {
 		//dropdown list for Myaccount
